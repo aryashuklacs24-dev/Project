@@ -1,0 +1,18 @@
+<h2>Welcome <%= user.owner %></h2>
+
+<a href="/car/new">Add Car</a>
+<a href="/logout">Logout</a>
+
+<ul>
+  <% cars.forEach(car => { %>
+    <li>
+      <%= car.carName %> - <%= car.price %>
+
+      <a href="/car/edit/<%= car._id %>">Edit</a>
+
+      <form method="POST" action="/car/<%= car._id %>?_method=DELETE">
+        <button>Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>

@@ -1,0 +1,6 @@
+<form method="POST" action="/car/<%= car._id %>?_method=PUT">
+  <input value="<%= car.carName %>" disabled>
+  <input name="price" value="<%= car.price %>">
+  <input name="seater" value="<%= car.seater %>">
+  <button>Update</button>
+</form>
